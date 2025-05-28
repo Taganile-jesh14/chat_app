@@ -12,115 +12,100 @@ class ChatPage extends StatelessWidget {
         title: Text('Hi Jesh!'),
         actions: [
           IconButton(
-            onPressed: () {
-              print('Icon pressed!');
-            },
-            icon: Icon(Icons.logout),
-          ),
+              onPressed: () {
+                print('Icon pressed!');
+              },
+              icon: Icon(Icons.logout))
         ],
       ),
-      body: ListView(
+      body: Column(
         children: [
-          // Message on the left
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                padding: EdgeInsets.all(24),
-                margin: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12),
-                    topRight: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
+          Expanded(
+            child: ListView(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                    padding: EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Hi, this is your message!',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        Image.network(
+                          'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
+                          height: 200,
+                        )
+                      ],
+                    ),
+                    margin: EdgeInsets.all(50),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                            bottomLeft: Radius.circular(12))),
                   ),
                 ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Hi, this is your message!',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    padding: EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Hi, this is your message!',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        Image.network(
+                          'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
+                          height: 200,
+                        )
+                      ],
                     ),
-                    SizedBox(height: 10),
-                    Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
-                      height: 200,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                padding: EdgeInsets.all(24),
-                margin: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12),
-                    topRight: Radius.circular(12),
-                    bottomLeft: Radius.circular(12),
+                    margin: EdgeInsets.all(50),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                            bottomLeft: Radius.circular(12))),
                   ),
                 ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Hi, this is your message!',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    padding: EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Hi, this is your message!',
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        ),
+                        Image.network(
+                          'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
+                          height: 200,
+                        )
+                      ],
                     ),
-                    SizedBox(height: 10),
-                    Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
-                      height: 200,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                padding: EdgeInsets.all(24),
-                margin: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12),
-                    topRight: Radius.circular(12),
-                    bottomLeft: Radius.circular(12),
+                    margin: EdgeInsets.all(50),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                            bottomLeft: Radius.circular(12))),
                   ),
                 ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Hi, this is your message!',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
-                    ),
-                    SizedBox(height: 10),
-                    Image.network(
-                      'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
-                      height: 200,
-                    ),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
           Container(
             height: 100,
-            padding: EdgeInsets.symmetric(horizontal: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -141,11 +126,8 @@ class ChatPage extends StatelessWidget {
               ],
             ),
             decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(20),
-              ),
-            ),
+                color: Colors.black,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
           ),
         ],
       ),
