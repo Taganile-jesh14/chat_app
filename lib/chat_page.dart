@@ -55,9 +55,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     final route = ModalRoute.of(context);
-    final userName = route != null && route.settings.arguments is String
-        ? route.settings.arguments as String
-        : "Guest";
+    final username = context.watch<AuthService>().getUserName();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -65,16 +63,14 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
-        title: Text('Hii $userName!'),
+        title: Text('Hii $username!'),
         actions: [
           IconButton(
-            onPressed: () {
-              context.read<AuthService>().logoutUser();
-              Navigator.pushReplacementNamed(context, '/');
-              print('Icon Pressed');
-            },
-            icon: const Icon(Icons.logout),
-          ),
+          onPressed: () {
+            context.read<AuthService>().updateUserName("New Name!");
+    },
+          icon: Icon(Icons.logout)),
+          
         ],
       ),
       body: Column(
