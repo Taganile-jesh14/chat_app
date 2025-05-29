@@ -1,9 +1,11 @@
+import 'package:chat_app/models/chat_message_entity.dart';
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatelessWidget{
-  final String message;
+  final ChatMessageEntity entity;
   final Alignment alignment;
-  const ChatBubble({Key? key, required this.alignment, required this.message}) : super(key: key);
+
+  const ChatBubble({Key? key, required this.alignment, required this.entity}) : super(key: key);
 
   @override
   Widget build(BuildContext context){
@@ -15,13 +17,14 @@ class ChatBubble extends StatelessWidget{
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '$message',
+              '${entity.text}',
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
-            Image.network(
-              'https://cdn.pixabay.com/photo/2015/10/31/17/33/press-1015988_1280.jpg',
-              height: 200,
-            )
+            if(entity.imageUrl != null)
+              Image.network(
+                '${entity.imageUrl}',
+                height: 200,
+              )
           ],
         ),
         margin: EdgeInsets.all(50),
