@@ -57,8 +57,8 @@ class LoginPage extends StatelessWidget {
                     color: Colors.blueGrey
                 ),
               ),
-              Image.network(
-                'https://cdn.pixabay.com/photo/2015/10/31/17/33/press-1015988_1280.jpg',
+              Image.asset(
+                'assets/illustration.jpg',
                 height: 200,
               ),
 
@@ -78,11 +78,12 @@ class LoginPage extends StatelessWidget {
                       },
                       controller: userNameController,
                     ),
+
                     verticalSpacing(24),
+
                     LoginTextField(
                       hasAsterisks: true,
-                      controller: passwordController,
-                      hintText: 'Enter your password',
+                      controller: passwordController, hintText: 'Enter your password',
                     ),
                   ],
                 ),
