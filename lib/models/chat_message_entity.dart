@@ -23,11 +23,11 @@ class ChatMessageEntity{
 }
 
 class  Author{
-  String userName;
+  String username;
 
-  Author({required this.userName});
+  Author({required this.username});
 
   factory Author.fromJson(Map<String, dynamic> json){
-    return Author(userName: json['username']);
+    return Author(username: json['username']);
   }
 }
