@@ -1,0 +1,67 @@
+[
+  {
+    "author": {
+      "username": "Chef Jesh"
+    },
+    "createdAt": 1692547200000,
+    "id": "20001",
+    "text": "Hey everyone! I just tried out a new recipe for homemade pizza."
+  },
+  {
+    "author": {
+      "username": "GourmandGeorge"
+    },
+    "createdAt": 1692547300000,
+    "id": "20002",
+    "text": "Ooh, that sounds delicious! What kind of toppings did you use?"
+  },
+  {
+    "author": {
+      "username": "Chef Jesh"
+    },
+    "createdAt": 1692547400000,
+    "id": "20003",
+    "text": "I went classic with pepperoni, mushrooms, and bell peppers. But here's the twist — I added some arugula on top for extra flavor!"
+  },
+  {
+    "author": {
+      "username": "PizzaLover"
+    },
+    "createdAt": 1692547500000,
+    "id": "20004",
+    "text": "That sounds amazing! Did you make the dough from scratch or use store-bought?"
+  },
+  {
+    "author": {
+      "username": "Chef Jesh"
+    },
+    "createdAt": 1692547600000,
+    "id": "20005",
+    "text": "I made the dough from scratch! It was surprisingly easy. Here’s a picture of the final result:",
+    "image": "https://cdn.pixabay.com/photo/2024/08/04/14/46/pizza-8944546_1280.jpg"
+  },
+  {
+    "author": {
+      "username": "GourmandGeorge"
+    },
+    "createdAt": 1692547700000,
+    "id": "20006",
+    "text": "Wow, it looks fantastic! The crust looks perfectly golden. How long did it take to bake?"
+  },
+  {
+    "author": {
+      "username": "Chef Jesh"
+    },
+    "createdAt": 1692547800000,
+    "id": "20007",
+    "text": "Thanks! It baked for about 12 minutes at 475°F (245°C). The key is to preheat the oven really well. Let me know if you try making it yourself!"
+  },
+  {
+    "author": {
+      "username": "PizzaLover"
+    },
+    "createdAt": 1692547900000,
+    "id": "20008",
+    "text": "Definitely will give it a try! Thanks for sharing the details. Can't wait to taste it!"
+  }
+]
