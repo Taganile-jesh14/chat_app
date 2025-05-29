@@ -32,6 +32,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
@@ -59,10 +60,18 @@ class LoginPage extends StatelessWidget {
                     color: Colors.blueGrey
                 ),
               ),
-              Image.asset(
-                'Assets/illustration.jpg',
+              verticalSpacing(24),
+              Container(
                 height: 200,
+                width: MediaQuery.of(context).size.width,
+                decoration:
+                BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.fitWidth,
+                        image: AssetImage('assets/illustration.png')),
+                    borderRadius: BorderRadius.circular(24)),
               ),
+              verticalSpacing(24),
 
               Form(
                 key: _formkey,
