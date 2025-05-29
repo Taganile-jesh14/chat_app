@@ -37,7 +37,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               Image.network(
-                'https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG',
+                'https://cdn.pixabay.com/photo/2015/10/31/17/33/press-1015988_1280.jpg',
                 height: 200,
               ),
 
