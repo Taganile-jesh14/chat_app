@@ -1,7 +1,9 @@
 import 'package:chat_app/models/chat_message_entity.dart';
 import 'package:chat_app/widgets/picker_body.dart';
 import 'package:flutter/material.dart';
+import 'package:chat_app/services/auth_service.dart';
 import 'package:chat_app/repo/image_repository.dart';
+import 'package:provider/provider.dart';
 
 class ChatInput extends StatefulWidget{
   final Function(ChatMessageEntity) onSubmit;
@@ -23,7 +25,7 @@ class _ChatInputState extends State<ChatInput> {
         text: chatMessageController.text,
         id: '230',
         createdAt: DateTime.now().millisecondsSinceEpoch,
-        author:Author(userName: 'Divine'));
+        author: Author(username: context.read<AuthService>().getUserName()));
 
     if(_selectedImageUrl.isNotEmpty){
       newChatMessage.imageUrl = _selectedImageUrl;
