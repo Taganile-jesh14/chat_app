@@ -17,13 +17,12 @@ class NetworkImagePickerBody extends StatelessWidget {
         future: _imageRepo.getNetworkImages(),
         builder: (BuildContext context,
             AsyncSnapshot<List<PixelfordImage>> snapshot) {
-          if (snapshot.hasData)
+          if (snapshot.hasData) {
             return GridView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-
                 return GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       onImageSelected(snapshot.data![index].urlFullSize);
                     },
                     child: Image.network(snapshot.data![index].urlFullSize));
@@ -31,9 +30,20 @@ class NetworkImagePickerBody extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 crossAxisSpacing: 2,
                 mainAxisSpacing: 2,
-                maxCrossAxisExtent: MediaQuery.of(context).size.width * 0.5,
+                maxCrossAxisExtent: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.5,
               ),
             );
+          }else if (snapshot.hasError){
+            return Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Text('This is the error: ${snapshot.error}'),
+            );
+          }
+
+
           //return Image.network(snapshot.data![0].urlFullSize);
           return Padding(
             padding: const EdgeInsets.all(8.0),
